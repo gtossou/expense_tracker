@@ -53,5 +53,11 @@
 
 table{
   margin-top: 100px;
-  background-color: azure;
+  background-color: white;
+  color: black;
+}
+
+.glyphicon, .test{
+  height:20px;
+  background-color: black;
 }
