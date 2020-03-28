@@ -32,13 +32,7 @@ document.addEventListener("click",function(event){
       expenseList[i].index = i;
     }
     localStorage.setItem("expense", JSON.stringify(expenseList));
-    ReactDOM.render(
-      <React.StrictMode>
-        <App /> 
-      </React.StrictMode>,
-    // document.querySelector('#expenses-table')
-    document.querySelector('#expense-table')
-    )
+    
   }
   else if (event.target.className.includes("del-img")){
     let indexVal = event.target.dataset.index
