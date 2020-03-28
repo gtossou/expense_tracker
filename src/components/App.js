@@ -6,16 +6,17 @@ function App() {
 
   const empty = [{
     index : 0,
-    expenseok : "",
-    dateValue : "H"
+    paymentType : "",
+    description : "",
+    dateValue : "",
+    amountSpent : ""
   }]
-  const storedExpenses = JSON.parse(localStorage.getItem("expense")) || empty
-  console.log(storedExpenses)
-  let Ex = storedExpenses.map(expense => {
+  let storedExpenses = JSON.parse(localStorage.getItem("expense")) || empty
+  let Ex = storedExpenses.filter(expense=>expense.paymentType && expense.description && expense.dateValue && expense.amountSpent)
+  Ex = Ex.map(expense => {
     return (<Expense key={expense.index} expense={expense}/>)
   })
-  // console.log(Ex)
-  console.log("Ex")
+
   return (<div><table className="table table-striped table-hover">
     <thead>
         <tr><th></th>

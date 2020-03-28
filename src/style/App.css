@@ -55,9 +55,23 @@ table{
   margin-top: 100px;
   background-color: white;
   color: black;
+  border: 1px solid black;
+}
+th{
+  width: 200px;  
+}
+td{
+  width: 200px;
+  background: whitesmoke;
 }
 
-.glyphicon, .test{
-  height:20px;
-  background-color: black;
+.type-img{
+  width: 75px;
+  height: 55px;
+  box-shadow: 1px 2px 2px black;
+}
+
+.del-img{
+  width: 55px;;
+  height: 55px;;
 }

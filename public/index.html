@@ -4,35 +4,17 @@
 <head>
   <meta charset="utf-8" />
   <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#000000" />
-  <meta name="description" content="Web site created using create-react-app" />
-  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-  <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
   <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
   <link rel="stylesheet" href="../src/App.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
-  <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
   <title>React App</title>
 </head>
 
 <body>
   <noscript>You need to enable JavaScript to run this app.</noscript>
-  <button type="button" class="touse">Test</button>
   <div class="App App-header" id="root">
     <h1>
       Simple expense manager
@@ -41,12 +23,12 @@
 
       <label for="payment-type" class="form-label">Type: </label>
       <select class="form-input" name="payment-type" id="payment-type">
-        <option value="first" data-icon="glyphicon glyphicon-credit-card" selected>Cash
+        <option value="cash" selected>Cash
         </option>
-        <option value="second" data-icon="glyphicon glyphicon-credit-card">Card
+        <option value="card">Card
         </option>
-        <option value="third">Cryptocurrency</option>
-        <option value="third">Other</option>
+        <option value="crypto">Cryptocurrency</option>
+        <option value="other">Other</option>
       </select>
       <label for="spend-desc" class="form-label">Name: </label>
       <input type="dropdown" class="form-input" id="spend-desc" name="spend-desc" placeholder="What you spent on">
@@ -55,7 +37,7 @@
 
     <div class="form-inline form-group">
 
-      <label class="form-label" for="date-spent">Date</label>
+      <label class="form-label" for="date-spent">Date: </label>
       <input type="text" class="form-input" id="datepicker" name="date-spent">
       <label for="amount-spent">Amount: </label>
       <input type="dropdown" class="form-input" id="amount-spent" name="amount-spent" required>
@@ -65,7 +47,20 @@
     <div class="form-inline">
       <button type="button" class="add-button btn btn-primary btn-lg" id="add-expense-btn">Add a new expense</button>
     </div>
-    <div class="form-inline" id="expense-table"></div>
+    <div class="form-inline" id="expense-table">
+      <table class="table table-striped table-hover" id="tfc">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Type</th>
+            <th>Description</th>
+            <th>Date</th>
+            <th>Amount</th>
+          </tr>
+        </thead>
+
+      </table>
+    </div>
 
   </div>
 
