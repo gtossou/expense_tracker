@@ -16,52 +16,6 @@
 <body>
   <noscript>You need to enable JavaScript to run this app.</noscript>
   <div class="App App-header" id="root">
-    <h1>
-      Simple expense manager
-    </h1>
-    <div class="form-inline form-group">
-
-      <label for="payment-type" class="form-label">Type: </label>
-      <select class="form-input" name="payment-type" id="payment-type">
-        <option value="cash" selected>Cash
-        </option>
-        <option value="card">Card
-        </option>
-        <option value="crypto">Cryptocurrency</option>
-        <option value="other">Other</option>
-      </select>
-      <label for="spend-desc" class="form-label">Name: </label>
-      <input type="dropdown" class="form-input" id="spend-desc" name="spend-desc" placeholder="What you spent on">
-
-    </div>
-
-    <div class="form-inline form-group">
-
-      <label class="form-label" for="date-spent">Date: </label>
-      <input type="text" class="form-input" id="datepicker" name="date-spent">
-      <label for="amount-spent">Amount: </label>
-      <input type="dropdown" class="form-input" id="amount-spent" name="amount-spent" required>
-
-    </div>
-
-    <div class="form-inline">
-      <button type="button" class="add-button btn btn-primary btn-lg" id="add-expense-btn">Add a new expense</button>
-    </div>
-    <div class="form-inline" id="expense-table">
-      <table class="table table-striped table-hover" id="tfc">
-        <thead>
-          <tr>
-            <th></th>
-            <th>Type</th>
-            <th>Description</th>
-            <th>Date</th>
-            <th>Amount</th>
-          </tr>
-        </thead>
-
-      </table>
-    </div>
-
   </div>
 
   <!--

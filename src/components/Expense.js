@@ -1,4 +1,4 @@
-import React from "react"
+import React,{Component} from "react"
 import cash from '../img/cash.png';
 import card from '../img/card.png';
 import crypto from '../img/crypto.png';
@@ -17,23 +17,25 @@ function getImg(propValue){
     }
     else return other
 }
-function Expense(props){
 
-    return(
-        
-        <tbody>
+class Expense extends Component{
+    render(){
+        const constrows = this.props.expenses.map((exp) =>  (
             <tr>
                 <td><button type="button" className="delete btn btn-default btn-sm">
-                    <img data-index={props.expense.index} src={del} className="del-img"/></button>
+                    <img data-index={exp.index} src={del} className="del-img"/></button>
                 </td>
-                <td><button type="button" data-index={props.expense.index} className="btn btn-default btn-sm">
-                    <img src={getImg(props.expense.paymentType)} className="type-img"/></button></td>
-                <td>{props.expense.description}</td>
-                <td>{props.expense.dateValue}</td>
-                <td>{props.expense.amountSpent}</td>
+                <td><button type="button" data-index={exp.index} className="btn btn-default btn-sm">
+                    <img src={getImg(exp.paymentType)} className="type-img"/></button></td>
+                <td>{exp.description}</td>
+                <td>{exp.dateValue}</td>
+                <td>{exp.amountSpent}</td>
             </tr>
-        </tbody>
-    )
+        ))
+        return(            
+        this.props.expenses ? <table><tbody>{constrows}</tbody></table> : <p>Nothing to show</p>
+        )
+    }
 }
 
 export default Expense 

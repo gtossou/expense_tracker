@@ -2,10 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './components/App';
-
 import * as serviceWorker from './serviceWorker';
 
-function getStorage(){
+ReactDOM.render(
+  <App />,document.querySelector('.App')
+)
+/*function getStorage(){
   return JSON.parse(localStorage.getItem("expense")) || [];
 }
 
@@ -60,4 +62,4 @@ document.addEventListener("click",function(event){
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
 
-serviceWorker.unregister();
+serviceWorker.unregister();*/
