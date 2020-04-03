@@ -5,46 +5,35 @@ class ExpenseEntry extends Component{
     render() {
         return (
             <div>
-                <h1>
-                    Simple expense manager
-                </h1>
-                <div className="form-inline form-group">
-                    <label htmlFor="payment-type" className="form-label">Type: </label>
-                     <select className="form-input" name="payment-type" id="payment-type" defaultValue={"cash"}>
-                        <option value="cash">Cash
-                        </option>
-                        <option value="card">Card
-                        </option>
-                        <option value="crypto">Cryptocurrency</option>
-                        <option value="other">Other</option>
-                    </select>
-                    <label htmlFor="spend-desc" className="form-label">Name: </label>
-                    <input type="dropdown" className="form-input" id="spend-desc" name="spend-desc" placeholder="What you spent on"></input>
-                </div>
-                <div className="form-inline form-group">
+                <form className="text-center border border-light p-5">
 
-                    <label className="form-label" htmlFor="date-spent">Date: </label>
-                    <input type="text" className="form-input" id="datepicker" name="date-spent"></input>
-                    <label htmlFor="amount-spent">Amount: </label>
-                    <input type="dropdown" className="form-input" id="amount-spent" name="amount-spent" required></input>
-                </div>
-                <div className="form-inline">
-                    <button onClick={() => this.props.onAddExpense} type="button" className="add-button btn btn-primary btn-lg" id="add-expense-btn">Add a new expense</button>
-                </div>
-                <div className="form-inline" id="expense-table">
-                    <table className="table table-striped table-hover" id="tfc">
-                        <thead> 
-                        <tr>
-                            <th></th>
-                            <th>Type</th>
-                            <th>Description</th>
-                            <th>Date</th>
-                            <th>Amount</th>
-                        </tr>
-                        </thead>
-                    </table>
-                </div>
+                    <p className="h1 mb-4">Simple expense tracker</p>
+
+                    <div className="form-row mb-4 justify-content-md-center">
+                        <div className="col-3">
+                            <select className="form-control" name="payment-type" id="payment-type" defaultValue={"cash"}>
+                                <option value="cash">Cash
+                                </option>
+                                <option value="card">Card
+                                </option>
+                                <option value="crypto">Cryptocurrency</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div className="col-3">
+                            <input type="date" className="form-input" id="datepicker" className="form-control"/>
+                        </div>
+                    </div>
+                    <input type="text" id="spend-desc" className="mb-4 justify-content-md-center col-6" placeholder="Expense details..."/>
+                    <div className="justify-content-md-center">
+                    <input type="text" id="amount-spent" className="justify-content-md-center col-6" placeholder="Amount"/>
+                    </div>
+
+                    <button onClick={() => this.props.onAddExpense()} id="add-expense-btn" className="btn btn-info my-4 justify-content-md-center col-6" type="submit">SUBMIT</button>
+
+            </form>
             </div>
+            
         )
     }
 }
