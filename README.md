@@ -2,7 +2,7 @@
 
 **_Simple expense tracker in React and Bootstrap_**
 
-Demo [here](http://mastermind-expense_tracker.herokuapp.com/)
+Demo [here](http://mastermind-expense-tracker.herokuapp.com/)
 
 ![Expense Tracker app](src/img/example.jpg)
 
