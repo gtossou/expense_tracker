@@ -4,7 +4,7 @@
 
 Demo [here](http://mastermind-expense_tracker.herokuapp.com/)
 
-![Expense Tracker app](img/example.jpg)
+![Expense Tracker app](src/img/example.jpg)
 
 ### Summary
 
