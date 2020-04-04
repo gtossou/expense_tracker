@@ -2,7 +2,7 @@
 
 **_Simple expense tracker in React and Bootstrap_**
 
-Demo [here](http://mastermind-expense-tracker.herokuapp.com/)
+Demo [here](https://warm-sands-13457.herokuapp.com/)
 
 ![Expense Tracker app](src/img/example.jpg)
 
@@ -14,9 +14,9 @@ of transaction.</p>
 <p>Your expense is recorded in local storage so your data can be retrieved even if you refresh the page.
 You can add as much as items you want and also delete each one.</p>
 
-<p>I used cutting edge front end technologies like **React** and **Bootstrap** for this projet.</p>
+<p>I used cutting edge front end technologies like React and Bootstrap for this projet.</p>
 <p>Regarding Bootstrap i am now familiar with the grid system and some components(forms, buttons...).</p>
-<p>Regarding react, i know how to organize my app into components, pass data between them update states.</p>
+<p>Regarding react, i know how to organize my app into components, pass data between them  and update states.</p>
 
 It was a lot of headaches at first but now i'm more confident in the skills i developed in those frameworks.
 
